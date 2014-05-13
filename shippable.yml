@@ -4,5 +4,6 @@ node_js:
 env:
  global:
   - FOO=BAR
+  - FIZZ=BIN
 install: true
-script: echo $FOO
+script: echo $FOO $FIZZ
