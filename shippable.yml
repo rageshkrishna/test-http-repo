@@ -1,11 +1,14 @@
-language: scala
-scala:
- - 2.11.0
-env:
- global:
- - ARTIFACTORY_USER=username
- - ARTIFACTORY_PASS=password
-jdk:
- - oraclejdk8
-install: true
-script: echo $ARTIFACTORY_USER $ARTIFACTORY_PASS
+ language: scala
+ scala:
+   - 2.11.0
+ env:
+  global:
+  - ARTIFACTORY_USER=username
+  - ARTIFACTORY_PASS=password
+ jdk:
+   - oraclejdk8
+ branches:
+   only:
+     - master
+ notifications:
+   flowdock: api-token
